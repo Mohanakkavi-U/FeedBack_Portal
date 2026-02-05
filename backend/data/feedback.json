@@ -1,0 +1,33 @@
+{
+  "feedback": [
+    {
+      "id": "dfebcffe-dedb-4296-be68-b0450733fc16",
+      "name": "tyy",
+      "email": "mohanakkaviu@gmail.com",
+      "serviceType": "Fashion & Clothing",
+      "category": "Comfort",
+      "rating": 3,
+      "feedback": "i hate it",
+      "status": "Closed",
+      "createdAt": "2026-01-28T19:38:52.278Z",
+      "updatedAt": "2026-01-28T19:41:38.914Z",
+      "sentiment": "negative",
+      "sentimentScore": 100,
+      "keywords": [
+        {
+          "word": "hate",
+          "count": 1
+        }
+      ],
+      "priority": "Low",
+      "issueType": "Complaint",
+      "repeatAnalysis": {
+        "isRepeat": false,
+        "repeatCount": 0,
+        "similarIssues": [],
+        "priority": "Low"
+      },
+      "analyzedAt": "2026-01-28T19:38:52.279Z"
+    }
+  ]
+}

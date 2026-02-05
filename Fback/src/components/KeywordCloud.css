@@ -1,0 +1,29 @@
+.keyword-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 200px;
+}
+
+.keyword-item {
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+}
+
+.keyword-item:hover {
+    transform: scale(1.1);
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.keyword-cloud-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}

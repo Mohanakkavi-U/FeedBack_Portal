@@ -1,0 +1,222 @@
+.feedback-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.feedback-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-lg);
+}
+
+.feedback-card.high-priority {
+    background: rgba(245, 87, 108, 0.05);
+    border-color: rgba(245, 87, 108, 0.3);
+}
+
+.feedback-card.high-priority:hover {
+    background: rgba(245, 87, 108, 0.1);
+    border-color: rgba(245, 87, 108, 0.5);
+    box-shadow: 0 8px 32px rgba(245, 87, 108, 0.2);
+}
+
+.high-priority-indicator {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    z-index: 10;
+}
+
+.priority-badge {
+    background: var(--error);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(245, 87, 108, 0.3);
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.feedback-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+.user-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.time-ago {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.feedback-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.feedback-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.feedback-rating .star-rating {
+    font-size: 1.25rem;
+}
+
+.rating-value {
+    font-weight: 700;
+    color: var(--warning);
+}
+
+.feedback-content {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.feedback-content p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.feedback-content p.truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-expand {
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    padding: 0;
+    transition: var(--transition);
+}
+
+.btn-expand:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+.feedback-keywords {
+    margin-bottom: 1rem;
+}
+
+.keywords-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.keywords-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feedback-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.status-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-status {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-status:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    color: var(--text-primary);
+}
+
+.btn-status.active {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .feedback-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .feedback-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .status-buttons {
+        justify-content: space-between;
+    }
+
+    .btn-status {
+        flex: 1;
+        min-width: 0;
+    }
+}
